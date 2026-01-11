@@ -58,6 +58,9 @@ $user = $_SESSION['user'];
                     <li class="nav-item">
                         <a class="nav-link" href="#gems">Hidden Gems</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="dashboard.php">Dashboard</a>
+                    </li>
                     <li class="nav-item ms-lg-3">
                         <div class="d-flex align-items-center gap-2 px-3 py-1 bg-light rounded-pill border">
                             <i class="bi bi-person-circle text-primary"></i>

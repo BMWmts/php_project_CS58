@@ -18,7 +18,7 @@ $user = $_SESSION['user'];
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Noto+Sans+Thai:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #6366f1;
+            --primary: #e3e4ecff;
             --bg: #0f172a;
             --card-bg: rgba(30, 41, 59, 0.7);
             --text: #f8fafc;
@@ -26,7 +26,7 @@ $user = $_SESSION['user'];
 
         body {
             font-family: 'Outfit', 'Noto Sans Thai', sans-serif;
-            background: #0f172a;
+            background: #e1e3e9ff;
             color: var(--text);
             margin: 0;
             padding: 2rem;
@@ -47,7 +47,7 @@ $user = $_SESSION['user'];
 
         h1 {
             font-weight: 600;
-            background: linear-gradient(to right, #818cf8, #c084fc);
+            background: linear-gradient(to right, #222020ff, #a5a8a8ff);
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -79,26 +79,70 @@ $user = $_SESSION['user'];
         }
 
         .logout-btn {
-            padding: 0.5rem 1.5rem;
-            background: rgba(248, 113, 113, 0.1);
-            color: #f87171;
-            border: 1px solid rgba(248, 113, 113, 0.2);
-            border-radius: 10px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
 
-        .logout-btn:hover {
-            background: #f87171;
-            color: white;
-        }
+.logout-btn:hover {
+  letter-spacing: 3px;
+  background-color: #e80f0fff;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #191a1aff 0px 7px 29px 0px;
+}
+
+.logout-btn:active {
+  letter-spacing: 2px;
+  background-color: #e80f0fff;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #191a1aff 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.back-btn {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(255 255 255 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
+
+.back-btn:hover {
+  letter-spacing: 3px;
+  background-color: #2fca4eff;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #ecf0f0ff 0px 7px 29px 0px;
+}
+
+.back-btn:active {
+  letter-spacing: 2px;
+  background-color: #2fca4eff;
+  color: hsl(0, 0%, 100%);
+  box-shadow: #ecf0f0ff 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>ยินดีต้อนรับ, <?php echo htmlspecialchars($user['name']); ?></h1>
-            <a href="logout.php" class="logout-btn">ออกจากระบบ</a>
+            <a href="logout.php" class="logout-btn">logout</a>
+            <a href="page.php" class="back-btn">หน้าหลัก</a>
         </div>
 
         <div class="card">
